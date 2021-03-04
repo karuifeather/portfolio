@@ -16,10 +16,6 @@ GENERAL LAYOUT + GRID
 PAGE LAYOUT
 COMPONENTS
 */
-:root {
-  --color-secondary: #00eee1 ;
-}
-
 *,
 *::after,
 *::before {
@@ -49,6 +45,9 @@ html {
 
 body {
   box-sizing: border-box;
+  background-color: linear-gradient(45.34deg, #ea52f8 5.66%, #0066ff 94.35%);
+  font-size: 1.6rem;
+  font-family: "Lato" sans-serif;
 }
 @media only screen and (max-width: 56.25em) {
   body {
@@ -56,9 +55,49 @@ body {
   }
 }
 
+.page-container {
+  display: grid;
+  grid-template-rows: 97vh repeat(8, 45rem);
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+}
+
 ::selection {
-  background-color: #eeeeee6b;
-  color: var(--color-secondary);
+  background-color: #83d0e2;
+  color: #eee;
+}
+
+.header {
+  grid-column: full-start/full-end;
+}
+.header__hero-box {
+  height: calc(100% - 6.5rem);
+  background-image: linear-gradient(to bottom, #000, #777);
+}
+
+.nav {
+  background-color: #09254c;
+  width: 100%;
+  height: 6.5rem;
+  padding: 1.5rem 4rem;
+  display: flex;
+  justify-content: space-between;
+}
+.nav__left, .nav__right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__right {
+  width: 50%;
+}
+.nav__item {
+  font-weight: 300;
+  text-align: center;
+}
+.nav__item-link, .nav__item-link:active, .nav__item-link:visited {
+  font-size: 2.6rem;
+  color: #fff;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=style.css.map */
