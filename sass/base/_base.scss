@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Yeseva+One&display=swap');
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  // This defines what 1 rem should be
+  font-size: 62.5%;
+
+  @include respond(tab-land) {
+    font-size: 56.25%; // 1rem = 9px; 9/16
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%; // 1rem = 8px; 8/16 =.5
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%; //1rem = 12px; 12/16
+  }
+}
+
+body {
+  box-sizing: border-box;
+  background-color: linear-gradient(45.34deg, #EA52F8 5.66%, #0066FF 94.35%);
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
+}
+
+
+::selection {
+  background-color : $color-primary;
+  color: var(--color-secondary);
+}

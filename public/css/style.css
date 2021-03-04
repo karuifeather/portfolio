@@ -1,0 +1,64 @@
+/*
+0-600px 	    PHONE
+600-900px       TABLET PORTRAIT
+900-1200px      TABLET LANDSCAPE
+1200-1800px     IS WHERE OUR NORMAL STYLES APPLY
+1800px+         BIG DESKTOP
+$breakpoint arguments
+-- phone
+--tab-port
+--tab-land
+--big-desktop
+1em = 16px;
+ORDER:
+BASE + TYPOGRAPHY
+GENERAL LAYOUT + GRID
+PAGE LAYOUT
+COMPONENTS
+*/
+:root {
+  --color-secondary: #00eee1 ;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media only screen and (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+}
+@media only screen and (max-width: 56.25em) {
+  body {
+    padding: 0;
+  }
+}
+
+::selection {
+  background-color: #eeeeee6b;
+  color: var(--color-secondary);
+}
+
+/*# sourceMappingURL=style.css.map */
