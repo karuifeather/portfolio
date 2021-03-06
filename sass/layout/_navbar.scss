@@ -29,19 +29,47 @@
     padding: 0 1.4rem;
   }
 
-  &__item-link,
-  &__item-link:active,
+  &__item-link:link,
   &__item-link:visited {
-    font-size: 2.8rem;
+    font-size: 2.7rem;
     font-weight: 400;
-    color: $color-grey-light-1;
+    display: inline-block;
+    color: $color-grey-light-2;
     letter-spacing: 0.4px;
     text-decoration: none;
+    position: relative;
 
     @include respond(tab-port) {
       font-size: 2.4rem;
       font-weight: 300;
     }
+  }
+
+  &__item-link::after {
+    content: '';
+    position: absolute;
+    background-color: $color-secondary-dark;
+    height: 2px;
+    width: 0%;
+    bottom: -5%;
+    left: 0;
+    backface-visibility: hidden;
+    transition: width 0.3s cubic-bezier(1, 0, 0, 1) 0.2s;
+
+    @include respond(tab-port) {
+      height: 1px;
+    }
+  }
+
+  &__item-link:hover {
+    &::after {
+      width: 100%;
+    }
+  }
+
+  &__item-link:focus,
+  &__item-link:active {
+    color: $color-primary;
   }
 
   &__logo-box {
