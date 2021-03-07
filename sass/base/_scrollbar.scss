@@ -1,0 +1,25 @@
+/* Works on Firefox */
+// * {
+//   scrollbar-width: thin;
+//   scrollbar-color: blue orange;
+// }
+
+/* Works on Chrome, Edge, and Safari */
+body::-webkit-scrollbar {
+  width: 1rem;
+  border-radius: 2rem;
+}
+
+body::-webkit-scrollbar-track {
+  background-image: linear-gradient($color-primary-light, $color-tertiary-dark);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(
+    to top,
+    $color-primary-dark,
+    $color-secondary-dark
+  );
+  border-radius: 2rem;
+  // border: 1px solid $color-secondary-dark;
+}

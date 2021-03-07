@@ -7,6 +7,12 @@
       href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Combo&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <title>asahiDesu</title>
   </head>
@@ -16,11 +22,18 @@
         <div class="nav__left">
           <div class="nav__item">
             <div class="nav__logo-box">
-              <img src="/public/img/logo.png" class="nav__logo"></img>
+              mE
+              <!-- <img src="/public/img/logo.png" class="nav__logo" /> -->
             </div>
           </div>
+          <div class="nav__ham is-active">
+            <span class="nav__ham-line nav__ham-line--1"></span>
+            <span class="nav__ham-line nav__ham-line--2"></span>
+            <span class="nav__ham-line nav__ham-line--3"></span>
+          </div>
         </div>
-        <div class="nav__right">
+
+        <div class="nav__right is-active">
           <div class="nav__item">
             <a href="#" class="nav__item-link">Home</a>
           </div>
@@ -49,5 +62,7 @@
         This is contact page hello darkness my old friend
       </section>
     </main>
+
+    <script src="/public/js/navmenu.js"></script>
   </body>
 </html>

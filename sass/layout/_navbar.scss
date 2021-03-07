@@ -7,9 +7,15 @@
   );
   width: 100%;
   height: 6.5rem;
-  padding: 1.5rem 3rem;
+  padding: 1.2rem 3rem;
 
   display: flex;
+
+  @include respond(phone) {
+    padding: 1rem 1.5rem;
+    padding-right: 2rem;
+    display: block;
+  }
 
   &__left,
   &__right {
@@ -21,28 +27,44 @@
   &__right {
     width: min-content;
     margin-left: auto;
+
+    @include respond(phone) {
+      display: none;
+    }
   }
 
   &__item {
     font-weight: 300;
     text-align: center;
-    padding: 0 1.4rem;
+    padding: 0 2rem;
+
+    @include respond(big-desktop) {
+      padding: 0 4.5rem;
+    }
+
+    @include respond(tab-port) {
+      padding: 0 1.8rem;
+    }
+
+    @include respond(phone) {
+      padding: 0 0.8rem;
+    }
   }
 
   &__item-link:link,
   &__item-link:visited {
-    font-size: 2.7rem;
+    font-size: 2.2rem;
     font-weight: 400;
     display: inline-block;
-    color: $color-grey-light-3;
+    color: $color-grey-light-2;
     letter-spacing: 0.4px;
     text-decoration: none;
     position: relative;
     transition: color 0.2s;
 
-    @include respond(tab-port) {
-      font-size: 2.4rem;
-      font-weight: 300;
+    // TODO: Fix the size if needed on responsiveness
+    @include respond(phone) {
+      font-size: 1.6rem;
     }
   }
 
@@ -63,19 +85,76 @@
   }
 
   &__item-link:hover {
-    color: $color-grey-light-2;
+    color: $color-grey-light-1;
     &::after {
       width: 100%;
     }
   }
 
   &__logo-box {
-    height: 4rem;
-    width: 4rem;
+    font-family: $logo-font-fam;
+    font-size: 5rem;
+    font-weight: bolder;
+    color: $color-secondary-dark;
+    // height: 4rem;
+    // width: 4rem;
+
+    // @include respond(phone) {
+    //   height: 3.5rem;
+    //   width: 3.5rem;
+    // }
   }
 
-  &__logo {
-    height: 100%;
-    width: 100%;
+  // &__logo {
+  //   height: 100%;
+  //   width: 100%;
+  // }
+
+  &__ham {
+    height: 2rem;
+    width: 2.5rem;
+    position: relative;
+    display: none;
+
+    @include respond(phone) {
+      display: block;
+    }
+
+    &-line {
+      background-color: $color-secondary-dark;
+      width: 95%;
+      height: 1px;
+      display: inline-block;
+
+      &--1 {
+        position: absolute;
+        top: 0;
+      }
+      &--2 {
+        position: absolute;
+        top: 50%;
+      }
+      &--3 {
+        position: absolute;
+        bottom: 0;
+      }
+    }
+
+    // When someone click on the menu
+    &.is-active &-line {
+      transition: all 0.1s;
+
+      &--1 {
+        transform: rotate(-135deg);
+        top: 50%;
+      }
+      &--2 {
+        background-color: transparent;
+      }
+      &--3 {
+        top: 50%;
+        transform: rotate(135deg);
+      }
+    }
   }
 }

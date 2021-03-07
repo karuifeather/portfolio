@@ -5,12 +5,12 @@
       to right bottom,
       rgba($color-primary, 0.3) 0%,
       rgba($color-primary, 0.4) 15%,
-      rgba($color-primary, 0.7) 40%,
-      rgba($color-primary, 0.9) 85%
+      rgba($color-primary, 0.6) 40%,
+      rgba($color-primary, 1) 85%
     ),
     url(../img/hero.jpg);
   background-size: cover;
-  background-position: top;
+  background-position: bottom;
   background-blend-mode: overlay;
 
   &__hero-box {
