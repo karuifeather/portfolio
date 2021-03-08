@@ -1,0 +1,16 @@
+@keyframes navFadeDown {
+  0% {
+    top: 45%;
+    opacity: 0.2;
+  }
+
+  80% {
+    top: 115%;
+    opacity: 0.9;
+  }
+
+  100% {
+    top: 100%;
+    opacity: 1;
+  }
+}

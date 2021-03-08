@@ -13,6 +13,18 @@
   background-position: bottom;
   background-blend-mode: overlay;
 
+  @include respond(phone) {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary, 0.3) 0%,
+        rgba($color-primary, 0.4) 15%,
+        rgba($color-primary, 0.6) 40%,
+        rgba($color-primary, 1) 85%
+      ),
+      url(../img/hero-small.jpg);
+    background-position: top left;
+  }
+
   &__hero-box {
     height: calc(100% - 6.5rem);
   }

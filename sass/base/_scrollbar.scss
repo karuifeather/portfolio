@@ -11,15 +11,11 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background-image: linear-gradient($color-primary-light, $color-tertiary-dark);
+  background-color: #021334;
 }
 
 body::-webkit-scrollbar-thumb {
-  background-image: linear-gradient(
-    to top,
-    $color-primary-dark,
-    $color-secondary-dark
-  );
+  background-image: linear-gradient(#20a59e, #8fcc8e);
   border-radius: 2rem;
   // border: 1px solid $color-secondary-dark;
 }
