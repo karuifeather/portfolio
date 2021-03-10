@@ -33,7 +33,44 @@
     background-position: top left;
   }
 
-  &__hero-box {
-    // height: calc(100% - $navbar-height);
+  &__hero {
+    &-box {
+      position: absolute;
+      top: 50%;
+      left: 25%;
+      height: min-content;
+      width: 50rem;
+      border-radius: 0.5rem;
+      transform: translate(-50%, -50%);
+      background-image: linear-gradient(
+        to bottom,
+        rgba($color-grey-dark-2, 0.096) 0%,
+        rgba($color-grey-dark-2, 0.096) 42%,
+        rgba($color-grey-dark-2, 0.432)
+      );
+      padding: 2rem 3.5rem;
+    }
+
+    &-title {
+      color: $color-secondary-dark;
+      font-size: 7rem;
+      font-weight: 400;
+      margin-bottom: 2rem;
+      letter-spacing: 0.5px;
+    }
+
+    &-subtitle {
+      color: $color-grey-light-4;
+      font-size: 4rem;
+      font-weight: 400;
+      margin-bottom: 4rem;
+      letter-spacing: 1px;
+    }
+
+    &-cta-box {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 1rem;
+    }
   }
 }

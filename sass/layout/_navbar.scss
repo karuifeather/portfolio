@@ -194,7 +194,9 @@
   left: 0;
   background-image: none;
   background-color: $color-grey-light-3-lighter;
+  border-radius: 0 0 0.6rem 0.6rem;
   box-shadow: 0 1rem 1.5rem rgba($color-black, 0.1);
+  z-index: 45;
 
   .nav__item-link:link,
   .nav__item-link:visited {

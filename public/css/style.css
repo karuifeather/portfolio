@@ -90,6 +90,36 @@ body::-webkit-scrollbar-thumb {
   border-radius: 2rem;
 }
 
+.cta {
+  display: inline-block;
+  padding: 1.2rem 2.5rem;
+  border-radius: 0.5rem;
+  font-size: 3rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s, transform 0.01s;
+}
+.cta:active {
+  transform: translateY(0.2rem);
+}
+.cta--primary {
+  color: #dddddd;
+  background-color: #09254c;
+}
+.cta--primary:hover {
+  background-color: #092041;
+  color: #eee;
+}
+.cta--secondary {
+  background-color: transparent;
+  border: 1px solid #09254c;
+  color: #09254c;
+}
+.cta--secondary:hover {
+  background-color: #09254c;
+  color: #eee;
+}
+
 .header {
   grid-column: full-start/full-end;
   background-image: linear-gradient(to right bottom, rgba(31, 66, 135, 0.3) 0%, rgba(31, 66, 135, 0.4) 15%, rgba(31, 66, 135, 0.6) 40%, #1f4287 85%);
@@ -104,6 +134,37 @@ body::-webkit-scrollbar-thumb {
     background-position: top left;
   }
 }
+.header__hero-box {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  height: min-content;
+  width: 50rem;
+  border-radius: 0.5rem;
+  transform: translate(-50%, -50%);
+  background-image: linear-gradient(to bottom, rgba(153, 153, 153, 0.096) 0%, rgba(153, 153, 153, 0.096) 42%, rgba(153, 153, 153, 0.432));
+  padding: 2rem 3.5rem;
+}
+.header__hero-title {
+  color: #09254c;
+  font-size: 7rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  letter-spacing: 0.5px;
+}
+.header__hero-subtitle {
+  color: #dddddd;
+  font-size: 4rem;
+  font-weight: 400;
+  margin-bottom: 4rem;
+  letter-spacing: 1px;
+}
+.header__hero-cta-box {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+}
+
 .nav {
   background-image: linear-gradient(to bottom, rgba(153, 153, 153, 0.096) 0%, rgba(153, 153, 153, 0.096) 42%, rgba(153, 153, 153, 0.432));
   width: 100%;
@@ -271,7 +332,9 @@ body::-webkit-scrollbar-thumb {
   left: 0;
   background-image: none;
   background-color: #ececec;
+  border-radius: 0 0 0.6rem 0.6rem;
   box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.1);
+  z-index: 45;
 }
 .nav.is-sticky .nav__item-link:link,
 .nav.is-sticky .nav__item-link:visited {
