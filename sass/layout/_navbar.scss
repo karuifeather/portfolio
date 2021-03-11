@@ -1,12 +1,11 @@
 .nav {
   background-image: linear-gradient(
-    to bottom,
     rgba($color-grey-dark-2, 0.096) 0%,
     rgba($color-grey-dark-2, 0.096) 42%,
     rgba($color-grey-dark-2, 0.432)
   );
   width: 100%;
-  height: $navbar-height;
+  height: min-content;
   padding: 1.1rem 3rem;
   position: relative;
   transition: all 0.6s;
@@ -82,7 +81,7 @@
 
     @include respond(big-desktop) {
       &:not(:last-child) {
-        margin-right: 6rem;
+        margin-right: 8rem;
       }
     }
 
@@ -95,7 +94,7 @@
 
   &__item-link:link,
   &__item-link:visited {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
     font-weight: 400;
     display: inline-block;
     color: $color-grey-light-2;
@@ -103,6 +102,11 @@
     text-decoration: none;
     position: relative;
     transition: color 0.2s;
+
+    @include respond(big-desktop) {
+      font-size: 3rem;
+      font-weight: 700;
+    }
 
     @include respond(tab-port) {
       font-size: 2.8rem;
@@ -143,7 +147,7 @@
     color: $color-secondary-dark;
 
     @include respond(big-desktop) {
-      font-size: 7rem;
+      font-size: 6rem;
     }
 
     @include respond(phone) {
