@@ -183,8 +183,10 @@ body::-webkit-scrollbar-thumb {
 }
 .nav__left, .nav__right {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+}
+.nav__left {
+  justify-content: space-between;
 }
 .nav__right {
   width: min-content;
@@ -192,15 +194,25 @@ body::-webkit-scrollbar-thumb {
 }
 @media only screen and (max-width: 37.5em) {
   .nav__right.is-active {
-    display: flex;
+    margin-left: -1rem;
     position: absolute;
     top: 100%;
-    height: 8vh;
-    width: 98vw;
+    height: min-content;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
     background-image: linear-gradient(to bottom, rgba(153, 153, 153, 0.096) 0%, rgba(153, 153, 153, 0.096) 42%, rgba(153, 153, 153, 0.432));
     animation: navFadeDown 0.5s ease-out;
     animation-fill-mode: backwards;
     justify-content: space-evenly;
+  }
+  .nav__right.is-active .nav__item {
+    margin: 0.5rem 2rem;
+  }
+  .nav__right.is-active .nav__item:last-child {
+    margin-bottom: 1rem;
   }
 }
 @media only screen and (max-width: 37.5em) {
@@ -211,21 +223,18 @@ body::-webkit-scrollbar-thumb {
 .nav__item {
   font-weight: 300;
   text-align: center;
-  padding: 0 2rem;
+}
+.nav__item:not(:last-child) {
+  margin-right: 4rem;
 }
 @media only screen and (min-width: 112.5em) {
-  .nav__item {
-    padding: 0 4.5rem;
+  .nav__item:not(:last-child) {
+    margin-right: 6rem;
   }
 }
 @media only screen and (max-width: 56.25em) {
-  .nav__item {
-    padding: 0 1.8rem;
-  }
-}
-@media only screen and (max-width: 37.5em) {
-  .nav__item {
-    padding: 0 1rem;
+  .nav__item:not(:last-child) {
+    margin-right: 3rem;
   }
 }
 .nav__item-link:link, .nav__item-link:visited {
@@ -240,13 +249,13 @@ body::-webkit-scrollbar-thumb {
 }
 @media only screen and (max-width: 56.25em) {
   .nav__item-link:link, .nav__item-link:visited {
-    font-size: 2rem;
+    font-size: 2.8rem;
   }
 }
 @media only screen and (max-width: 37.5em) {
   .nav__item-link:link, .nav__item-link:visited {
-    font-size: 1.3rem;
-    font-weight: 300;
+    font-size: 2rem;
+    font-weight: 400;
   }
 }
 .nav__item-link::after {
@@ -276,6 +285,17 @@ body::-webkit-scrollbar-thumb {
   font-size: 5rem;
   font-weight: bolder;
   color: #09254c;
+}
+@media only screen and (min-width: 112.5em) {
+  .nav__logo-box {
+    font-size: 7rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .nav__logo-box {
+    margin-left: 1rem;
+    font-size: 4rem;
+  }
 }
 .nav__ham {
   height: 2rem;
@@ -338,6 +358,16 @@ body::-webkit-scrollbar-thumb {
 }
 .nav.is-sticky .nav__item-link:link,
 .nav.is-sticky .nav__item-link:visited {
+  color: #09254c;
+}
+.nav.is-sticky .nav__right.is-active {
+  margin-left: 0;
+  margin-top: -0.5rem;
+  z-index: 100;
+  background-image: none;
+  background-color: #dddddd;
+}
+.nav.is-sticky .nav__right.is-active .nav-item-link {
   color: #09254c;
 }
 
