@@ -1,3 +1,26 @@
 .section__header {
-  font-size: 4rem;
+  display: inline-block;
+  font-size: 5rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: transparent;
+  background-image: linear-gradient(
+    to right bottom,
+    $color-primary-light,
+    $color-secondary-dark
+  );
+  letter-spacing: 0.5px;
+  -webkit-background-clip: text;
+  position: relative;
+
+  &::after {
+    content: '';
+    background-color: $color-secondary-dark;
+    height: 2px;
+    width: 35%;
+    position: absolute;
+    bottom: -1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
