@@ -142,7 +142,7 @@
 
   &__logo-box {
     font-family: $logo-font-fam;
-    font-size: 5rem;
+    font-size: 4.5rem;
     font-weight: bolder;
     color: $color-secondary-dark;
 
@@ -215,7 +215,7 @@
   top: 0;
   left: 0;
   background-image: none;
-  background-color: $color-grey-light-3-lighter;
+  background-color: rgba($color-grey-light-3-lighter, 0.96);
   border-radius: 0 0 0.6rem 0.6rem;
   box-shadow: 0 1rem 1.5rem rgba($color-black, 0.1);
   z-index: 45;

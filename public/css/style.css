@@ -16,6 +16,10 @@ GENERAL LAYOUT + GRID
 PAGE LAYOUT
 COMPONENTS
 */
+.section__header {
+  font-size: 4rem;
+}
+
 @keyframes navFadeDown {
   0% {
     top: 45%;
@@ -65,7 +69,7 @@ body {
 
 .page-container {
   display: grid;
-  grid-template-rows: 100vh repeat(8, 45rem);
+  grid-template-rows: 100vh min-content repeat(8, 45rem);
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 }
 
@@ -343,7 +347,7 @@ body::-webkit-scrollbar-thumb {
 }
 .nav__logo-box {
   font-family: "Combo", cursive;
-  font-size: 5rem;
+  font-size: 4.5rem;
   font-weight: bolder;
   color: #09254c;
 }
@@ -412,7 +416,7 @@ body::-webkit-scrollbar-thumb {
   top: 0;
   left: 0;
   background-image: none;
-  background-color: #ececec;
+  background-color: rgba(236, 236, 236, 0.96);
   border-radius: 0 0 0.6rem 0.6rem;
   box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.1);
   z-index: 45;
@@ -430,6 +434,14 @@ body::-webkit-scrollbar-thumb {
 }
 .nav.is-sticky .nav__right.is-active .nav-item-link {
   color: #09254c;
+}
+
+.section-portfolio {
+  grid-column: full-start/full-end;
+  background-color: #eee;
+  text-align: center;
+  height: 100rem;
+  padding: 10rem 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */

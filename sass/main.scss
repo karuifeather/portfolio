@@ -1,6 +1,8 @@
 @import 'abstracts/mixins';
 @import 'abstracts/variables';
 
+@import 'components/headings';
+
 @import 'base/animation';
 @import 'base/base';
 @import 'base/scrollbar';
@@ -9,3 +11,5 @@
 
 @import 'layout/header';
 @import 'layout/navbar';
+
+@import 'pages/home';

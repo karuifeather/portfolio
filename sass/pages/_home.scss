@@ -1,0 +1,9 @@
+.section-portfolio {
+  grid-column: full-start / full-end;
+
+  background-color: $color-grey-light-3;
+  text-align: center;
+  height: 100rem; // TODO: remove this later
+
+  padding: 10rem 2rem;
+}
