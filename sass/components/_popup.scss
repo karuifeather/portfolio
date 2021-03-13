@@ -1,0 +1,156 @@
+$right-width: 35%;
+$left-width: 55%;
+$sub-container-height: 80%;
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba($color-black, 0.7);
+  backdrop-filter: blur(0.5rem);
+  z-index: 1000;
+
+  &__box {
+    height: 80%;
+    width: 70vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $color-grey-light-3;
+    box-shadow: 0 1.6rem 6rem rgba($color-black, 0.7);
+    border-radius: 0.8rem;
+    padding: 2rem 4rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  // Every element below this line will be inside box
+
+  &__close {
+    position: absolute;
+    top: 1rem;
+    right: 2.4rem;
+    font-size: 3rem;
+    font-weight: 700;
+    color: $color-secondary-dark;
+    cursor: pointer;
+  }
+
+  &__right {
+    width: $right-width;
+    height: $sub-container-height;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &-top {
+      height: 75%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &-bottom {
+      height: 20%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: flex-start;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: -15%;
+      transform: translateY(-50%);
+      height: 40%;
+      width: 2px;
+      background-color: $color-secondary-dark;
+    }
+  }
+
+  &__left {
+    height: $sub-container-height;
+    width: $left-width;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding: 2rem 4rem;
+  }
+
+  // TOP-HALF OF RIGHT SIDE
+  &__image-box {
+    height: 20rem;
+    width: 90%;
+    overflow: hidden;
+    border-radius: 1rem;
+    background-image: linear-gradient(
+      rgba($color-primary-dark, 0.096) 0%,
+      rgba($color-primary-dark, 0.096) 42%,
+      rgba($color-primary-dark, 0.432)
+    );
+  }
+  &__image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transform: scale(1.1);
+    box-shadow: 0 1.4rem 3rem rgba($color-black, 0.2);
+  }
+
+  // BOTTOM-HALF OF RIGHT SIDE
+  &__button {
+    font-size: 2rem;
+    display: inline-block;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 0.4rem;
+    display: flex;
+    align-items: center;
+
+    svg {
+      margin-right: 1rem;
+    }
+
+    &--full {
+      background-color: $color-secondary-dark;
+      color: $color-grey-light-2;
+
+      svg {
+        fill: $color-grey-light-2;
+      }
+    }
+
+    &--half {
+      border: 1px solid $color-secondary-dark;
+      color: $color-secondary-dark;
+      font-weight: 700;
+
+      svg {
+        fill: $color-secondary-dark;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 4rem;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+    color: $color-primary;
+  }
+
+  &__tags {
+    display: flex;
+  }
+
+  &__description {
+    text-align: justify;
+  }
+}
