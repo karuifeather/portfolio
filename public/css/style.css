@@ -24,8 +24,10 @@ COMPONENTS
   color: transparent;
   background-image: linear-gradient(to right bottom, #4b7ad6, #09254c);
   letter-spacing: 0.5px;
+  line-height: 1.6;
   -webkit-background-clip: text;
   position: relative;
+  margin-bottom: 5rem;
 }
 .section__header::after {
   content: "";
@@ -36,6 +38,15 @@ COMPONENTS
   bottom: -1.5rem;
   left: 50%;
   transform: translateX(-50%);
+}
+.section__sub-header {
+  display: inline-block;
+  font-size: 3rem;
+  font-family: "Indie Flower", cursive;
+  color: #248297;
+  letter-spacing: 0.4px;
+  line-height: 1.6;
+  font-weight: 400;
 }
 
 .card {
@@ -119,6 +130,7 @@ COMPONENTS
   width: 100%;
   background-color: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(0.5rem);
+  transition: background-color 0.3s, backdrop-filter 0.3s;
   z-index: 1000;
 }
 .popup__box {
@@ -135,6 +147,7 @@ COMPONENTS
   display: flex;
   align-items: center;
   justify-content: space-between;
+  transition: all 0.4s;
 }
 .popup__close {
   position: absolute;
@@ -385,7 +398,7 @@ body::-webkit-scrollbar-thumb {
   top: 65%;
   left: 5%;
   height: min-content;
-  width: 50vw;
+  width: 42vw;
   border-radius: 0.5rem;
   transform: translateY(-60%);
   background-image: linear-gradient(to bottom, rgba(153, 153, 153, 0.096) 0%, rgba(153, 153, 153, 0.096) 42%, rgba(153, 153, 153, 0.432));
@@ -683,11 +696,36 @@ body::-webkit-scrollbar-thumb {
 }
 .section-portfolio__projects {
   align-self: stretch;
-  margin: 10rem 0;
+  margin: 6rem 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  gap: 6rem;
+  gap: 8rem 6rem;
   justify-items: center;
+}
+.section-portfolio__btn {
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: bolder;
+  font-family: "Indie Flower", cursive;
+  letter-spacing: 0.4px;
+  padding: 0.4rem 0.6rem;
+  margin-top: 2rem;
+  color: #248297;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #248297;
+  background-color: transparent;
+  transition: all 0.3s;
+}
+.section-portfolio__btn:hover {
+  transform: translateY(-0.5rem);
+  background-color: #248297;
+  color: #f4f4f4;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.4);
+}
+.section-portfolio__btn:active {
+  transform: translateY(-0.1rem);
+  box-shadow: 0 0.8rem 2.5rem rgba(0, 0, 0, 0.5);
 }
 
 /*# sourceMappingURL=style.css.map */
