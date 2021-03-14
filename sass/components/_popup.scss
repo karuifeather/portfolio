@@ -140,7 +140,7 @@ $sub-container-height: 80%;
   }
 
   &__title {
-    font-size: 4rem;
+    font-size: 3.6rem;
     font-weight: 400;
     letter-spacing: 0.2px;
     color: $color-primary;
@@ -148,6 +148,9 @@ $sub-container-height: 80%;
 
   &__tags {
     display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 95%;
   }
 
   &__description {
