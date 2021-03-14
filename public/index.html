@@ -66,9 +66,9 @@
     </header>
 
     <section class="section-portfolio" id="portfolio">
-      <div class="popup">
+      <!-- <div class="popup">
         <div class="popup__box">
-          <div class="popup__close">x</div>
+          <div class="popup__close" id="close-popup">x</div>
           <div class="popup__right">
             <div class="popup__right-top">
               <div class="popup__image-box">
@@ -129,7 +129,7 @@
             </p>
           </div>
         </div>
-      </div>
+      </div> -->
       <h2 class="section__header">Portfolio</h2>
       <div class="section-portfolio__projects">
         <div class="card">
@@ -143,7 +143,23 @@
             <h3 class="card__details-title">
               <span>Landing Page for Natours</span>
             </h3>
-            <button class="card__details-button">Details</button>
+            <button
+              class="card__details-button"
+              id="details"
+              data-title="Landing Page for Natours"
+              data-desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+              obcaecati distinctio autem sequi, rerum ipsa saepe hic atque
+              reprehenderit, assumenda non dolore dolor modi at. Lorem ipsum
+              dolor sit amet consectetur adipisicing elit. Molestiae incidunt
+              iusto ipsam, sequi aut quod facilis voluptatibus animi vitae ea
+              repudiandae ex quasi. Officia, consequatur."
+              data-tags='["HTML","CSS","SASS"]'
+              data-demo="https://katours.herokuapp.com"
+              data-github="https://github.com/karuifeather/katours-landing-page"
+              data-img-src="/public/img/natours-landing.png"
+            >
+              Details
+            </button>
           </div>
         </div>
         <div class="card">
@@ -157,7 +173,23 @@
             <h3 class="card__details-title">
               <span>Backend site for Natours</span>
             </h3>
-            <button class="card__details-button" id="details">Details</button>
+            <button
+              class="card__details-button"
+              id="details"
+              data-title="Backend site for Natours"
+              data-desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+              obcaecati distinctio autem sequi, rerum ipsa saepe hic atque
+              reprehenderit, assumenda non dolore dolor modi at. Lorem ipsum
+              dolor sit amet consectetur adipisicing elit. Molestiae incidunt
+              iusto ipsam, sequi aut quod facilis voluptatibus animi vitae ea
+              repudiandae ex quasi. Officia, consequatur."
+              data-tags='["Node","Express","MongoDB", "Mongoose", "Pug", "Nodemailer"]'
+              data-demo="https://katours.herokuapp.com/overview"
+              data-github="https://github.com/karuifeather/katours"
+              data-img-src="/public/img/natours-backend.png"
+            >
+              Details
+            </button>
           </div>
         </div>
         <div class="card"></div>
@@ -166,5 +198,6 @@
 
     <script src="/public/js/navmenu.js"></script>
     <script src="/public/js/stickyNav.js"></script>
+    <script src="/public/js/popup.js"></script>
   </body>
 </html>
