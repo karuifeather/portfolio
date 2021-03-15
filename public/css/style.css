@@ -122,6 +122,49 @@ COMPONENTS
   transform: translateY(2px);
 }
 
+@media only screen and (max-width: 56.25em), only screen and (hover: none) {
+  .card {
+    height: 45rem;
+    border-radius: 0.8rem;
+    background-color: #fafafa;
+  }
+  .card:hover .card__image {
+    transform: scale(1.15);
+    filter: none;
+  }
+  .card:hover .card__details-box {
+    transform: none;
+  }
+  .card__image {
+    height: 45%;
+    width: 90%;
+    transition: none;
+  }
+  .card__details-box {
+    position: relative;
+    left: 0;
+    height: 50%;
+    width: 90%;
+    transition: none;
+    margin-top: 1rem;
+    margin-left: 1.2rem;
+    align-items: center;
+  }
+  .card__details-title {
+    text-align: center;
+  }
+  .card__details-title span {
+    background-image: none;
+  }
+}
+@media only screen and (max-width: 37.5em), only screen and (hover: none) {
+  .card {
+    height: 38rem;
+  }
+  .card__details-box {
+    margin-left: 0;
+  }
+}
 .popup {
   position: fixed;
   top: 0;
@@ -694,6 +737,16 @@ body::-webkit-scrollbar-thumb {
   flex-direction: column;
   align-items: center;
 }
+@media only screen and (max-width: 75em) {
+  .section-portfolio {
+    padding: 8rem 6rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .section-portfolio {
+    padding: 6.5rem 4rem;
+  }
+}
 .section-portfolio__projects {
   align-self: stretch;
   margin: 6rem 0;
@@ -701,6 +754,24 @@ body::-webkit-scrollbar-thumb {
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   gap: 8rem 6rem;
   justify-items: center;
+}
+@media only screen and (max-width: 75em) {
+  .section-portfolio__projects {
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    gap: 8rem;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .section-portfolio__projects {
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 6rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .section-portfolio__projects {
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 6rem;
+  }
 }
 .section-portfolio__btn {
   cursor: pointer;

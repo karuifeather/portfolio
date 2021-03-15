@@ -86,3 +86,56 @@ $margin-details-left: 3rem;
     }
   }
 }
+
+// Respond to tab-port or anything below tab-port
+@media only screen and (max-width: 56.25em), only screen and (hover: none) {
+  .card {
+    height: 45rem;
+    border-radius: 0.8rem;
+    background-color: $color-grey-light-1;
+
+    &:hover &__image {
+      transform: scale(1.15);
+      filter: none;
+    }
+
+    &:hover &__details-box {
+      transform: none;
+    }
+
+    &__image {
+      height: 45%;
+      width: 90%;
+      transition: none;
+    }
+
+    &__details-box {
+      position: relative;
+      left: 0;
+      height: 50%;
+      width: 90%;
+      transition: none;
+      margin-top: 1rem;
+      margin-left: 1.2rem;
+      align-items: center;
+    }
+
+    &__details-title {
+      text-align: center;
+
+      span {
+        background-image: none;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 37.5em), only screen and (hover: none) {
+  .card {
+    height: 38rem;
+
+    &__details-box {
+      margin-left: 0;
+    }
+  }
+}
