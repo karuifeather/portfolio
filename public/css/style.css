@@ -930,6 +930,11 @@ body::-webkit-scrollbar-thumb {
   gap: 8rem 6rem;
   justify-items: center;
 }
+@media only screen and (min-width: 112.5em) {
+  .section-portfolio__projects {
+    grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+  }
+}
 @media only screen and (max-width: 75em) {
   .section-portfolio__projects {
     grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
@@ -972,6 +977,13 @@ body::-webkit-scrollbar-thumb {
 .section-portfolio__btn:active {
   transform: translateY(-0.1rem);
   box-shadow: 0 0.8rem 2.5rem rgba(0, 0, 0, 0.5);
+}
+.section-portfolio__btn:disabled {
+  opacity: 0.4;
+  transform: none;
+  background-color: transparent;
+  color: #248297;
+  box-shadow: none;
 }
 
 /*# sourceMappingURL=style.css.map */

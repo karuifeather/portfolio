@@ -29,6 +29,10 @@
 
     justify-items: center;
 
+    @include respond(big-desktop) {
+      grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+    }
+
     @include respond(tab-land) {
       grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
       gap: 8rem;
@@ -70,6 +74,14 @@
     &:active {
       transform: translateY(-0.1rem);
       box-shadow: 0 0.8rem 2.5rem rgba($color-black, 0.5);
+    }
+
+    &:disabled {
+      opacity: 0.4;
+      transform: none;
+      background-color: transparent;
+      color: $color-tertiary-dark;
+      box-shadow: none;
     }
   }
 }
