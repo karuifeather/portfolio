@@ -5,6 +5,8 @@
   padding: 8rem 4rem;
   text-align: center;
 
+  // TODO: Responsive for big desktops
+
   @include respond(tab-land) {
     padding: 8rem 6rem;
   }
@@ -33,7 +35,7 @@
     }
 
     @include respond(tab-port) {
-      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
       gap: 6rem;
     }
 

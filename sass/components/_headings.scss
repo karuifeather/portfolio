@@ -16,6 +16,10 @@
     position: relative;
     margin-bottom: 5rem;
 
+    @include respond(tab-port) {
+      font-size: 3.4rem;
+    }
+
     &::after {
       content: '';
       background-color: $color-secondary-dark;
