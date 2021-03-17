@@ -20,6 +20,10 @@
       font-size: 3.4rem;
     }
 
+    span {
+      text-transform: none;
+    }
+
     &::after {
       content: '';
       background-color: $color-secondary-dark;
