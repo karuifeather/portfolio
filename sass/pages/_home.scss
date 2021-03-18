@@ -94,11 +94,11 @@ section {
   text-align: inherit;
 
   background-image: linear-gradient(
-      rgba($color-primary, 0.92) 0%,
-      rgba($color-primary, 0.75) 25%,
-      rgba($color-primary, 0.4) 50%,
-      rgba($color-primary, 0.75) 75%,
-      rgba($color-primary, 0.92) 100%
+      rgba($color-primary, 1) 0%,
+      rgba($color-primary, 0.85) 25%,
+      rgba($color-primary, 0.7) 50%,
+      rgba($color-primary, 0.85) 75%,
+      rgba($color-primary, 1) 100%
     ),
     url(../img/1c.jpg);
   background-repeat: no-repeat;
@@ -111,20 +111,45 @@ section {
   &__desc {
     position: absolute;
     top: 50%;
-    left: 25%;
+    left: 15%;
     border-radius: 0.5rem;
-    transform: translate(-25%, -50%);
+    transform: translate(-15%, -50%);
     background-image: linear-gradient(
-      to bottom,
-      rgba($color-grey-light-2, 0.096) 0%,
-      rgba($color-grey-light-2, 0.096) 42%,
-      rgba($color-grey-light-2, 0.432)
+      to top right,
+      rgba($color-grey-light-2, 0.2) 0%,
+      rgba($color-grey-light-2, 0.77) 27%,
+      rgba($color-grey-light-2, 0.8)
     );
-    height: 40%;
-    width: 40%;
+    height: min-content;
+    width: 50%;
     overflow: hidden;
 
-    padding: 2rem 4rem;
-    color: $color-grey-light-3;
+    padding: 3rem;
+
+    &-title {
+      font-size: 6rem;
+      font-family: $logo-font-fam;
+      letter-spacing: 0.5px;
+      font-weight: bolder;
+      color: $color-primary-light;
+
+      margin: 2rem 0;
+
+      &-sub {
+        display: block;
+        margin-top: 0.4rem;
+      }
+    }
+
+    &-body {
+      margin: 3rem 0;
+      font-size: 2.3rem;
+      line-height: 1.6;
+      letter-spacing: 0.6px;
+      font-weight: bold;
+      font-family: $my-font-fam;
+      color: $color-secondary-light;
+      text-align: justify;
+    }
   }
 }

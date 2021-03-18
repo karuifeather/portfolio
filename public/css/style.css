@@ -489,6 +489,30 @@ COMPONENTS
   margin-right: 1rem;
 }
 
+/* cursor */
+.typewriter-content > .txt {
+  position: relative;
+  border-right: 2px solid transparent;
+}
+.typewriter-content > .txt::after {
+  content: "";
+  height: 90%;
+  width: 2px;
+  background-color: #09254c;
+  position: absolute;
+  right: -0.5rem;
+  top: 0;
+  animation: blink 1.06s infinite backwards;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes navFadeDown {
   0% {
     top: 45%;
@@ -996,7 +1020,7 @@ section {
   height: 120vh;
   position: relative;
   text-align: inherit;
-  background-image: linear-gradient(rgba(31, 66, 135, 0.92) 0%, rgba(31, 66, 135, 0.75) 25%, rgba(31, 66, 135, 0.4) 50%, rgba(31, 66, 135, 0.75) 75%, rgba(31, 66, 135, 0.92) 100%), url(../img/1c.jpg);
+  background-image: linear-gradient(#1f4287 0%, rgba(31, 66, 135, 0.85) 25%, rgba(31, 66, 135, 0.7) 50%, rgba(31, 66, 135, 0.85) 75%, #1f4287 100%), url(../img/1c.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
@@ -1006,15 +1030,36 @@ section {
 .section-about__desc {
   position: absolute;
   top: 50%;
-  left: 25%;
+  left: 15%;
   border-radius: 0.5rem;
-  transform: translate(-25%, -50%);
-  background-image: linear-gradient(to bottom, rgba(244, 244, 244, 0.096) 0%, rgba(244, 244, 244, 0.096) 42%, rgba(244, 244, 244, 0.432));
-  height: 40%;
-  width: 40%;
+  transform: translate(-15%, -50%);
+  background-image: linear-gradient(to top right, rgba(244, 244, 244, 0.2) 0%, rgba(244, 244, 244, 0.77) 27%, rgba(244, 244, 244, 0.8));
+  height: min-content;
+  width: 50%;
   overflow: hidden;
-  padding: 2rem 4rem;
-  color: #eee;
+  padding: 3rem;
+}
+.section-about__desc-title {
+  font-size: 6rem;
+  font-family: "Combo", cursive;
+  letter-spacing: 0.5px;
+  font-weight: bolder;
+  color: #4b7ad6;
+  margin: 2rem 0;
+}
+.section-about__desc-title-sub {
+  display: block;
+  margin-top: 0.4rem;
+}
+.section-about__desc-body {
+  margin: 3rem 0;
+  font-size: 2.3rem;
+  line-height: 1.6;
+  letter-spacing: 0.6px;
+  font-weight: bold;
+  font-family: "Indie Flower", cursive;
+  color: #0b3166;
+  text-align: justify;
 }
 
 /*# sourceMappingURL=style.css.map */

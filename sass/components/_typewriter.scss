@@ -1,0 +1,26 @@
+/* cursor */
+.typewriter-content > .txt {
+  position: relative;
+  border-right: 2px solid transparent;
+
+  &::after {
+    content: '';
+    height: 90%;
+    width: 2px;
+    background-color: $color-secondary-dark;
+    position: absolute;
+    right: -0.5rem;
+    top: 0;
+    animation: blink 1.06s infinite backwards;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
