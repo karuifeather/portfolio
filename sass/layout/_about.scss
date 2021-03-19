@@ -1,5 +1,5 @@
 .section-about {
-  height: 100vh;
+  height: 110vh;
   position: relative;
   text-align: inherit;
 
@@ -18,12 +18,41 @@
     inset 0 -2rem 10rem rgba($color-black, 0.2);
   background-attachment: fixed;
 
+  @include respond(tab-land) {
+    height: 80vh;
+  }
+
+  @include respond(tab-port) {
+    height: 60vh;
+  }
+
+  @include respond(phone) {
+    height: 85vh;
+    background-image: linear-gradient(
+        rgba($color-primary, 1) 0%,
+        rgba($color-primary, 0.85) 25%,
+        rgba($color-primary, 0.7) 50%,
+        rgba($color-primary, 0.85) 75%,
+        rgba($color-primary, 1) 100%
+      ),
+      url(../img/3sm.jpg);
+  }
+
+  // For surface duo like devices
+  @media only screen and(min-width: 720px) and (max-height: 540px) and (hover: none) {
+    height: 100vh;
+  }
+
+  @media only screen and(min-width: 1024px) and (max-height: 1366px) and (hover: none) {
+    height: 70vh;
+  }
+
   &__desc {
     position: absolute;
     top: 50%;
     left: 15%;
-    border-radius: 0.5rem;
     transform: translate(-15%, -50%);
+    border-radius: 0.5rem;
     background-image: linear-gradient(
       to top right,
       rgba($color-grey-light-2, 0.2) 0%,
@@ -34,8 +63,35 @@
     width: 50%;
     overflow: hidden;
     box-shadow: 0 1.6rem 5rem rgba($color-black, 0.9);
-
     padding: 3rem 4rem 2rem;
+
+    @include respond(big-desktop) {
+      width: 35%;
+    }
+
+    @include respond(tab-land) {
+      width: 55%;
+    }
+
+    @media only screen and(min-width: 1024px) and (max-height: 1366px) and (hover: none) {
+      top: 50%;
+      left: 15%;
+      transform: translate(-15%, -50%);
+      width: 55%;
+    }
+
+    // For surface duo like devices
+    @media only screen and(min-width: 720px) and (max-height: 540px) and (hover: none) {
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 85%;
+    }
+
+    @include respond(phone) {
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 85%;
+    }
 
     &-title {
       font-size: 6rem;
@@ -43,8 +99,16 @@
       letter-spacing: 0.5px;
       font-weight: bolder;
       color: $color-primary-light;
-
       margin: 2rem 0;
+
+      @include respond(tab-land) {
+        font-size: 5rem;
+      }
+
+      @include respond(phone) {
+        font-size: 3rem;
+        margin: 1.5rem 0;
+      }
 
       &-sub {
         display: block;
@@ -61,6 +125,11 @@
       font-family: $my-font-fam;
       color: $color-secondary-light;
       text-align: justify;
+
+      @include respond(phone) {
+        font-size: 1.8rem;
+        margin: 2rem 0;
+      }
     }
   }
 }
