@@ -6,14 +6,15 @@
 @import 'components/popup';
 @import 'components/tag';
 @import 'components/typewriter';
+@import 'components/cta';
 
 @import 'base/animation';
 @import 'base/base';
 @import 'base/scrollbar';
 
-@import 'components/cta';
-
 @import 'layout/header';
 @import 'layout/navbar';
+@import 'layout/portfolio';
+@import 'layout/about';
 
 @import 'pages/home';
