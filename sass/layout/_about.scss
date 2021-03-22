@@ -1,5 +1,5 @@
 .section-about {
-  height: 110vh;
+  height: 90vh;
   position: relative;
   text-align: inherit;
 
@@ -39,11 +39,11 @@
   }
 
   // For surface duo like devices
-  @media only screen and(min-width: 720px) and (max-height: 540px) and (hover: none) {
+  @media only screen and(min-width: 45em) and (max-height: 33.75em) and (hover: none) {
     height: 100vh;
   }
 
-  @media only screen and(min-width: 1024px) and (max-height: 1366px) and (hover: none) {
+  @media only screen and(min-width: 1024px) and (max-height: 85.375em) and (hover: none) {
     height: 70vh;
   }
 
@@ -60,7 +60,7 @@
       rgba($color-grey-light-2, 0.8)
     );
     height: min-content;
-    width: 50%;
+    width: 45%;
     overflow: hidden;
     box-shadow: 0 1.6rem 5rem rgba($color-black, 0.9);
     padding: 3rem 4rem 2rem;
@@ -73,7 +73,7 @@
       width: 55%;
     }
 
-    @media only screen and(min-width: 1024px) and (max-height: 1366px) and (hover: none) {
+    @media only screen and(min-width: 64em) and (max-height: 85.375em) and (hover: none) {
       top: 50%;
       left: 15%;
       transform: translate(-15%, -50%);
@@ -81,7 +81,7 @@
     }
 
     // For surface duo like devices
-    @media only screen and(min-width: 720px) and (max-height: 540px) and (hover: none) {
+    @media only screen and(min-width: 45em) and (max-height: 33.75em) and (hover: none) {
       left: 50%;
       transform: translate(-50%, -50%);
       width: 85%;
@@ -94,7 +94,7 @@
     }
 
     &-title {
-      font-size: 6rem;
+      font-size: 5rem;
       font-family: $logo-font-fam;
       letter-spacing: 0.5px;
       font-weight: bolder;
@@ -118,8 +118,8 @@
 
     &-body {
       margin: 3rem 0;
-      font-size: 2.3rem;
-      line-height: 1.6;
+      font-size: 2rem;
+      line-height: 1.2;
       letter-spacing: 0.6px;
       font-weight: bold;
       font-family: $my-font-fam;
