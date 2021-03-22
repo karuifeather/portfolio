@@ -1,0 +1,39 @@
+.section-quotes {
+  background-color: $color-grey-light-3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 2rem 10rem rgba($color-black, 0.2),
+    inset 0 -2rem 10rem rgba($color-black, 0.2);
+
+  &__box {
+    height: 20rem;
+    width: 70%;
+    background-color: lightblue;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &::after {
+      content: '\275d';
+      position: absolute;
+      color: rgba($color-grey-dark, 0.5);
+      left: 0;
+      top: -5rem;
+      font-size: 30rem;
+    }
+  }
+
+  &__content {
+    font-size: 4rem;
+    font-family: $my-font-fam;
+  }
+
+  &__author {
+    font-size: 3.5rem;
+    font-family: $default-font-fam;
+  }
+}

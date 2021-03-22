@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 0-600px 	    PHONE
 600-900px       TABLET PORTRAIT
@@ -650,7 +651,7 @@ body {
 
 .page-container {
   display: grid;
-  grid-template-rows: 100vh min-content repeat(8, 45rem);
+  grid-template-rows: 100vh repeat(2, min-content) 40rem min-content 25rem;
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 }
 
@@ -1181,6 +1182,60 @@ body::-webkit-scrollbar-thumb {
     font-size: 1.8rem;
     margin: 2rem 0;
   }
+}
+
+.section-contact {
+  height: 90vh;
+  background-image: linear-gradient(to top left, #83d0e2, #0b3166 80%);
+  position: relative;
+}
+.section-contact__box {
+  padding: 1rem 3rem;
+  height: 30rem;
+  width: 75%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: linear-gradient(75deg, rgba(255, 255, 255, 0.95) 0, rgba(255, 255, 255, 0.9) 55%, transparent 55%), url(../img/4.jpg);
+  background-size: cover;
+  background-position: top;
+  border-radius: 0.5rem;
+  box-shadow: 0 1.6rem 7rem rgba(35, 74, 152, 0.7);
+}
+
+.section-quotes {
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 2rem 10rem rgba(0, 0, 0, 0.2), inset 0 -2rem 10rem rgba(0, 0, 0, 0.2);
+}
+.section-quotes__box {
+  height: 20rem;
+  width: 70%;
+  background-color: lightblue;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.section-quotes__box::after {
+  content: "❝";
+  position: absolute;
+  color: rgba(119, 119, 119, 0.5);
+  left: 0;
+  top: -5rem;
+  font-size: 30rem;
+}
+.section-quotes__content {
+  font-size: 4rem;
+  font-family: "Indie Flower", cursive;
+}
+.section-quotes__author {
+  font-size: 3.5rem;
+  font-family: "Lato", sans-serif;
 }
 
 section {
