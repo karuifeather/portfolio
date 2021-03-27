@@ -1211,8 +1211,8 @@ body::-webkit-scrollbar-thumb {
 .section-quotes__content {
   width: 85%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
-  gap: 5rem 4rem;
+  grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
+  gap: 6rem 8rem;
   margin: 5rem auto;
 }
 .section-quotes__box {
@@ -1223,16 +1223,31 @@ body::-webkit-scrollbar-thumb {
   position: relative;
   border-radius: 0 0 1rem 0;
   box-shadow: 0.8rem 0.5rem 0.8rem rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 1s, box-shadow 0.3s;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-evenly;
   overflow: hidden;
 }
+.section-quotes__box:nth-child(odd) {
+  opacity: 0;
+  transform: translate3d(-10rem, 0, 0) scale(0.6);
+}
+.section-quotes__box:nth-child(odd).show-quotes {
+  opacity: 1;
+  transform: translateZ(0) scale(1);
+}
+.section-quotes__box:nth-child(even) {
+  opacity: 0;
+  transform: translate3d(10rem, 0, 0) scale(0.6);
+}
+.section-quotes__box:nth-child(even).show-quotes {
+  opacity: 1;
+  transform: translateZ(0) scale(1);
+}
 .section-quotes__box:hover {
   box-shadow: 1.2rem 0.8rem 1.2rem rgba(0, 0, 0, 0.2);
-  transform: translateY(-0.5rem);
 }
 .section-quotes__box::after {
   content: "❝";

@@ -6,8 +6,8 @@
   &__content {
     width: 85%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
-    gap: 5rem 4rem;
+    grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
+    gap: 6rem 8rem;
     margin: 5rem auto;
   }
 
@@ -19,7 +19,7 @@
     position: relative;
     border-radius: 0 0 1rem 0;
     box-shadow: 0.8rem 0.5rem 0.8rem rgba($color-black, 0.15);
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 1s, box-shadow 0.3s;
 
     display: flex;
     flex-direction: column;
@@ -27,9 +27,30 @@
     justify-content: space-evenly;
     overflow: hidden;
 
+    &:nth-child(odd) {
+      // zoom-in-right
+      opacity: 0;
+      transform: translate3d(-10rem, 0, 0) scale(0.6);
+
+      &.show-quotes {
+        opacity: 1;
+        transform: translateZ(0) scale(1);
+      }
+    }
+
+    &:nth-child(even) {
+      // zoom-in-left
+      opacity: 0;
+      transform: translate3d(10rem, 0, 0) scale(0.6);
+
+      &.show-quotes {
+        opacity: 1;
+        transform: translateZ(0) scale(1);
+      }
+    }
+
     &:hover {
       box-shadow: 1.2rem 0.8rem 1.2rem rgba($color-black, 0.2);
-      transform: translateY(-0.5rem);
     }
 
     &::after {
@@ -60,4 +81,7 @@
     letter-spacing: 0.4px;
     margin-right: 3rem;
   }
+}
+
+.zoom-in-right {
 }
