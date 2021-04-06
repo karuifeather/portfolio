@@ -205,9 +205,9 @@ COMPONENTS
 }
 .form__label {
   display: block;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   opacity: 1;
-  color: #333;
+  color: #999;
   font-weight: 500;
   margin-left: 1.5rem;
   margin-top: 0.8rem;
@@ -217,12 +217,13 @@ COMPONENTS
 .form__input {
   display: block;
   font-family: inherit;
-  font-size: 1.3rem;
-  color: #333;
+  font-size: 1.5rem;
+  color: #999;
   letter-spacing: 0.2px;
   padding: 0.8rem 1rem;
   border: none;
   border-bottom: 3px solid transparent;
+  border-radius: 0.5rem;
   background-color: rgba(250, 250, 250, 0.4);
   text-indent: 1rem;
   height: 4.5rem;
@@ -1373,20 +1374,19 @@ body {
 .section-contact__box {
   padding: 2.5rem 3rem;
   height: min-content;
-  width: 80%;
-  background-image: linear-gradient(75deg, rgba(255, 255, 255, 0.85) 0, rgba(255, 255, 255, 0.8) 50%, transparent 50%), url(../img/4.jpg);
+  width: 85%;
   background-image: linear-gradient(75deg, rgba(255, 255, 255, 0.85) 0, rgba(255, 255, 255, 0.8) 50%, transparent 50%), url(../img/4.jpg);
   background-size: cover;
   background-position: top;
   border-radius: 0.5rem;
   box-shadow: 0 1.6rem 7rem rgba(35, 74, 152, 0.7);
   display: flex;
-  align-items: flex-end;
-  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
 }
 .section-contact__box-content {
-  height: 90%;
-  width: 75%;
+  height: 95%;
+  width: 55%;
   padding: 1rem 1.5rem;
 }
 
