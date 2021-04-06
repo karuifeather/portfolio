@@ -16,7 +16,6 @@
       href="https://fonts.googleapis.com/css2?family=Combo&display=swap"
       rel="stylesheet"
     />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="icon" href="/public/img/logo-small.png" />
     <title>asahiDesu | mE</title>
@@ -195,7 +194,7 @@
         </div>
         <div class="card"></div>
       </div>
-      <button class="section-portfolio__btn" disabled>See more &#8594;</button>
+      <button class="btn u-margin-top-2" disabled>See more &#8594;</button>
     </section>
 
     <section class="section-about" id="about">
@@ -254,18 +253,63 @@
 
     <section class="section-contact" id="contact">
       <div class="section-contact__box">
-        <div class="section-contact__box-content">Insert form here</div>
+        <div class="section-contact__box-content">
+          <h3 class="section__header u-text--5">Feel free to reach out</h3>
+          <form class="form">
+            <div class="form__control">
+              <input
+                type="text"
+                id="form__name"
+                class="form__input"
+                placeholder="Full name"
+                required
+                autocomplete="false"
+              />
+              <label for="form__name" class="form__label">Full name</label>
+            </div>
+            <div class="form__control">
+              <input
+                type="email"
+                id="form__email"
+                class="form__input"
+                required
+                placeholder="Email address"
+                autocomplete="false"
+              />
+              <label for="form__email" class="form__label">Email address</label>
+            </div>
+            <div class="form__control">
+              <textarea
+                id="form__textarea"
+                class="form__input form__textarea"
+                placeholder="Have something to say? Don't hesitate!"
+                autocomplete="false"
+              ></textarea>
+            </div>
+            <div class="submit">
+              <button
+                type="submit"
+                id="submit--btn"
+                class="btn u-margin-left-1"
+              >
+                Submit &#8594;
+              </button>
+            </div>
+          </form>
+          <div class="divider"><div class="divider__text">Or</div></div>
+          <div class="section__resume">
+            <!-- <button class="cta cta--primary">Get my resume</button> -->
+          </div>
+        </div>
       </div>
     </section>
+
+    <footer class="section-footer"></footer>
 
     <script src="/public/js/navmenu.js"></script>
     <script src="/public/js/stickyNav.js"></script>
     <script src="/public/js/popup.js"></script>
     <script src="/public/js/typeWriter.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="/public/js/intersection.js"></script>
-    <!-- <script type="text/javascript">
-      AOS.init();
-    </script> -->
   </body>
 </html>

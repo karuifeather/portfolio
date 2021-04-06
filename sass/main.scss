@@ -1,9 +1,10 @@
 @import 'abstracts/mixins';
 @import 'abstracts/variables';
 
-@import 'components/headings';
 @import 'components/btn';
 @import 'components/card';
+@import 'components/divider';
+@import 'components/form';
 @import 'components/popup';
 @import 'components/tag';
 @import 'components/typewriter';
@@ -12,6 +13,8 @@
 @import 'base/animation';
 @import 'base/base';
 @import 'base/scrollbar';
+@import 'base/typography';
+@import 'base/utilities';
 
 @import 'layout/header';
 @import 'layout/navbar';
