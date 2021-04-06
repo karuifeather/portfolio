@@ -44,40 +44,4 @@
       gap: 6rem;
     }
   }
-
-  &__btn {
-    cursor: pointer;
-    font-size: 2rem;
-    font-weight: bolder;
-    font-family: $my-font-fam;
-    letter-spacing: 0.4px;
-    padding: 0.4rem 0.6rem;
-    margin-top: 2rem;
-    color: $color-tertiary-dark;
-    outline: none;
-    border: none;
-    border-bottom: 1px solid $color-tertiary-dark;
-    background-color: transparent;
-    transition: all 0.3s;
-
-    &:hover {
-      transform: translateY(-0.5rem);
-      background-color: $color-tertiary-dark;
-      color: $color-grey-light-2;
-      box-shadow: 0 1rem 3rem rgba($color-black, 0.4);
-    }
-
-    &:active {
-      transform: translateY(-0.1rem);
-      box-shadow: 0 0.8rem 2.5rem rgba($color-black, 0.5);
-    }
-
-    &:disabled {
-      opacity: 0.4;
-      transform: none;
-      background-color: transparent;
-      color: $color-tertiary-dark;
-      box-shadow: none;
-    }
-  }
 }
