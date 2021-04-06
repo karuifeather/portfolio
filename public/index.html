@@ -254,18 +254,17 @@
     <section class="section-contact" id="contact">
       <div class="section-contact__box">
         <div class="section-contact__box-content">
-          <h3 class="section__header u-text--4">Feel free to reach out</h3>
+          <h3 class="section__header u-text--5">Feel free to reach out</h3>
           <form class="form">
             <div class="form__control">
               <input
                 type="text"
                 id="form__name"
                 class="form__input"
-                placeholder="Full name"
-                required
+                placeholder="Fullname"
                 autocomplete="no"
               />
-              <label for="form__name" class="form__label">Full name</label>
+              <label for="form__name" class="form__label">Fullname</label>
             </div>
             <div class="form__control">
               <input
@@ -273,7 +272,7 @@
                 id="form__email"
                 class="form__input"
                 required
-                placeholder="Email address"
+                placeholder="Email address*"
                 autocomplete="no"
               />
               <label for="form__email" class="form__label">Email address</label>
@@ -282,9 +281,21 @@
               <textarea
                 id="form__textarea"
                 class="form__input form__textarea"
-                placeholder="Have something to say? Don't hesitate!"
+                placeholder="Your message. Not required though!"
                 autocomplete="no"
               ></textarea>
+            </div>
+            <div class="form__control u-margin-top-4">
+              <input
+                type="checkbox"
+                id="form__resume"
+                class="form__checkbox"
+                name="resume"
+                value="yes"
+              />
+              <label for="form__resume" class="form__checkbox-label"
+                ><span></span>Get my résumé?</label
+              >
             </div>
             <div class="submit">
               <button

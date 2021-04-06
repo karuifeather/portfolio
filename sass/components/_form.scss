@@ -39,7 +39,7 @@
 
     &:focus {
       outline: none;
-      box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
       border-bottom: 3px solid $color-primary-dark;
     }
 
@@ -60,5 +60,32 @@
   &__textarea {
     height: 15rem !important;
     width: 80% !important;
+  }
+
+  &__checkbox {
+    margin-right: 5rem;
+    opacity: 0;
+
+    &-label {
+      font-size: 1.8rem;
+      position: relative;
+
+      &::before {
+        content: '';
+        font-size: 2rem;
+        position: absolute;
+        top: 0;
+        left: -5rem;
+        color: $color-grey-dark-3;
+        height: 2.2rem;
+        width: 2.2rem;
+        background-color: rgba($color-grey-light-1, 0.8);
+        border-radius: 0.5rem;
+      }
+    }
+  }
+
+  &__checkbox:checked + &__checkbox-label::before {
+    content: '\2713';
   }
 }
