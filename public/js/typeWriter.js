@@ -14,7 +14,6 @@ TypeWriter.prototype.type = function () {
   const index = this.wordsIndex % this.words.length;
   // Get alphabets of the current word
   const fullWord = this.words[index];
-  console.log(fullWord);
 
   // check if deleting
   if (this.isDeleting) {
