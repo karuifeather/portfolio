@@ -1003,6 +1003,69 @@ body {
   }
 }
 
+.footer {
+  background-color: rgba(0, 0, 0, 0.88);
+  grid-column: full-start/full-end;
+  padding: 2rem 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  gap: 2rem 6rem;
+  justify-content: center;
+  align-items: center;
+}
+.footer__nav, .footer__links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer__nav-item:not(:last-child) {
+  margin-right: 2rem;
+}
+.footer__nav-link {
+  text-decoration: none;
+  font-size: 2rem;
+  line-height: 1.6;
+  color: inherit;
+  transition: color 0.3s;
+}
+.footer__nav-link:hover {
+  color: #dddddd;
+}
+.footer__link {
+  display: inline-block;
+  margin: 1rem 0;
+  transition: all 0.3s;
+}
+.footer__link:not(:last-child) {
+  margin-right: 2rem;
+}
+.footer__link:hover {
+  transform: translateY(-0.3rem);
+}
+.footer__link:active {
+  transform: translateY(-0.1rem);
+}
+.footer__link--github:hover svg {
+  fill: #4183c4;
+}
+.footer__link--linkedin:hover svg {
+  fill: #0a66c2;
+}
+.footer__link svg {
+  height: 2.8rem;
+  width: 2.8rem;
+  fill: #777;
+  transition: fill 0.3s;
+}
+.footer__message {
+  grid-column: 1/-1;
+  width: 100%;
+  text-align: center;
+  font-size: 1.8rem;
+  letter-spacing: 0.2px;
+  line-height: 1.6rem;
+}
+
 .nav {
   background-image: linear-gradient(rgba(153, 153, 153, 0.096) 0%, rgba(153, 153, 153, 0.096) 42%, rgba(153, 153, 153, 0.432));
   width: 100%;
@@ -1400,7 +1463,7 @@ body {
   width: 90%;
   background-image: linear-gradient(75deg, rgba(255, 255, 255, 0.85) 0, rgba(255, 255, 255, 0.8) 55%, transparent 50%), url(../img/4.jpg);
   background-size: cover;
-  background-position: top;
+  background-position: top left;
   border-radius: 0.5rem;
   box-shadow: 0 1.6rem 7rem rgba(35, 74, 152, 0.7);
   display: flex;

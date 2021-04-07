@@ -1,0 +1,83 @@
+.footer {
+  background-color: rgba($color-black, 0.88);
+  grid-column: full-start / full-end;
+  padding: 2rem 3rem;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  gap: 2rem 6rem;
+
+  justify-content: center;
+  align-items: center;
+
+  &__nav,
+  &__links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__nav-item {
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+  }
+
+  &__nav-link {
+    text-decoration: none;
+    font-size: 2rem;
+    line-height: 1.6;
+    color: inherit;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $color-grey-light-4;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    margin: 1rem 0;
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+
+    transition: all 0.3s;
+
+    &:hover {
+      transform: translateY(-0.3rem);
+    }
+
+    &:active {
+      transform: translateY(-0.1rem);
+    }
+
+    &--github:hover {
+      svg {
+        fill: $color-github;
+      }
+    }
+
+    &--linkedin:hover {
+      svg {
+        fill: $color-linkedin;
+      }
+    }
+
+    svg {
+      height: 2.8rem;
+      width: 2.8rem;
+      fill: $color-grey-dark;
+      transition: fill 0.3s;
+    }
+  }
+
+  &__message {
+    grid-column: 1/-1;
+    width: 100%;
+    text-align: center;
+    font-size: 1.8rem;
+    letter-spacing: 0.2px;
+    line-height: 1.6rem;
+  }
+}
