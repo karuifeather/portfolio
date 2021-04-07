@@ -1,7 +1,7 @@
 .section-quotes {
   background-color: #efefefb3;
-  box-shadow: inset 0 1.1rem 1rem rgb(0 0 0 / 35%),
-    inset 0 -1.1rem 1rem rgb(0 0 0 / 35%);
+  box-shadow: inset 0 1.6rem 1rem rgb(0 0 0 / 35%),
+    inset 0 -1.6rem 1rem rgb(0 0 0 / 35%);
 
   &__content {
     width: 85%;
@@ -9,6 +9,14 @@
     grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
     gap: 6rem 8rem;
     margin: 5rem auto;
+
+    @include respond(tab-land) {
+      gap: 4rem;
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    }
+    @include respond(phone) {
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    }
   }
 
   &__box {
@@ -20,6 +28,14 @@
     border-radius: 0 0 1rem 0;
     box-shadow: 0.8rem 0.5rem 0.8rem rgba($color-black, 0.15);
     transition: transform 1s, box-shadow 0.3s;
+
+    @include respond(tab-land) {
+      height: 32rem;
+    }
+
+    @include respond(phone) {
+      height: 30rem;
+    }
 
     display: flex;
     flex-direction: column;
@@ -57,8 +73,8 @@
       content: '\275d';
       position: absolute;
       color: #77777712;
-      left: -1rem;
-      top: -11rem;
+      left: -1.5rem;
+      top: -8rem;
       font-size: 30rem;
     }
   }
@@ -81,7 +97,4 @@
     letter-spacing: 0.4px;
     margin-right: 3rem;
   }
-}
-
-.zoom-in-right {
 }

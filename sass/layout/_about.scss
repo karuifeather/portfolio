@@ -1,5 +1,6 @@
 .section-about {
-  height: 90vh;
+  min-height: 80vh;
+  height: min-content;
   position: relative;
   text-align: inherit;
 
@@ -59,6 +60,7 @@
       rgba($color-grey-light-2, 0.77) 27%,
       rgba($color-grey-light-2, 0.8)
     );
+    min-height: 45%;
     height: min-content;
     width: 45%;
     overflow: hidden;

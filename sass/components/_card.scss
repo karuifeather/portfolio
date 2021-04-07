@@ -92,7 +92,7 @@ $margin-details-left: 3rem;
   .card {
     height: 45rem;
     border-radius: 0.8rem;
-    background-color: $color-grey-light-1;
+    background-color: $color-grey-light-3;
 
     &:hover &__image {
       transform: scale(1.15);
@@ -121,6 +121,7 @@ $margin-details-left: 3rem;
     }
 
     &__details-title {
+      color: $color-tertiary-dark;
       text-align: center;
 
       span {

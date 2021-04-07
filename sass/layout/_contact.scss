@@ -19,7 +19,7 @@
         75deg,
         rgba($color-white, 0.85) 0,
         rgba($color-white, 0.8) 55%,
-        transparent 50%
+        transparent 55%
       ),
       url(../img/4.jpg);
 
@@ -30,6 +30,12 @@
         rgba($color-white, 0.85),
         rgba($color-white, 0.8)
       );
+    }
+
+    @include respond(phone) {
+      padding: 1.5rem 0.5rem;
+
+      width: 98%;
     }
 
     background-size: cover;

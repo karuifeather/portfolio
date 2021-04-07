@@ -3,15 +3,12 @@ function cb(entries, observer) {
     if (entry.isIntersecting) {
       entry.target.classList.add('show-quotes');
     }
-    //  else {
-    //   entry.target.classList.remove('show-quotes');
-    // }
   });
 }
 
 let options = {
   root: null,
-  rootMargin: '-20px',
+  rootMargin: '-10px',
   threshold: 1,
 };
 
