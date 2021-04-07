@@ -1,5 +1,4 @@
 .form {
-  // background-color: rgba(144, 238, 144, 0.158);
   padding: 1rem 1.4rem;
   height: min-content;
 
@@ -37,6 +36,10 @@
     width: 80%;
     transition: all 0.3s;
 
+    @include respond(tab-port) {
+      width: 100%;
+    }
+
     &:focus {
       outline: none;
       box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
@@ -60,6 +63,10 @@
   &__textarea {
     height: 15rem !important;
     width: 80% !important;
+
+    @include respond(tab-port) {
+      width: 100% !important;
+    }
   }
 
   &__checkbox {

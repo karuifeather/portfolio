@@ -23,6 +23,15 @@
       ),
       url(../img/4.jpg);
 
+    @include respond(tab-port) {
+      background: none;
+      background-image: linear-gradient(
+        75deg,
+        rgba($color-white, 0.85),
+        rgba($color-white, 0.8)
+      );
+    }
+
     background-size: cover;
     background-position: top left;
 
@@ -33,10 +42,24 @@
     align-items: center;
     justify-content: flex-start;
 
+    @include respond(tab-port) {
+      justify-content: center;
+    }
+
     &-content {
       height: 95%;
       width: 55%;
       padding: 1rem 1.5rem;
+
+      @include respond(tab-port) {
+        width: 90%;
+
+        text-align: center;
+      }
+
+      @include respond(phone) {
+        width: 100%;
+      }
     }
   }
 }
